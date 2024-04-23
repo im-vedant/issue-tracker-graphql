@@ -55,7 +55,7 @@ const {loading, error, data}=useQuery(GET_ALL_USERS)
             <Select.Label>Suggestions</Select.Label>
             <Select.Item value=' '>Unassigned</Select.Item>
             {
-                data.getAllUsers?.map((user,index)=>{
+                data.getAllUsers?.map((user :any,index:number)=>{
                     return <Select.Item key={index} value={user.id}>
                         {user.name}
                         </Select.Item>
